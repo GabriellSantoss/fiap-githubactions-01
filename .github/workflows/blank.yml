@@ -6,7 +6,8 @@ on:
     branches: [ "main" ]
  
 jobs:
-  job01:
+  job01: 
+    name: Executando Job
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
