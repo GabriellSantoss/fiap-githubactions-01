@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 as build-env
+FROM mcr.microsoft.com/dotnet/sdk:7.0 as build-env
 
 WORKDIR /App
 
@@ -8,10 +8,10 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 
 WORKDIR /App
 
 COPY --from=build-env /App/out .
 
-ENTRYPOINT ["dotnet", "TestandoDocker.dll"]
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
