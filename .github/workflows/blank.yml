@@ -23,11 +23,10 @@ jobs:
 
 
       - name: Build and push Docker images
-
         uses: docker/build-push-action@v6.18.0
         with:
           context: .
-          tags: 'latest'
+          tags: 'gabriellsantoss/fiap-githubactions-01:latest'
           push: true
   
 
