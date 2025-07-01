@@ -8,7 +8,7 @@ on:
 jobs:
   test-job: 
     name: Executando Job teste
-    runs-on: ubuntu-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Step 1
         uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
         with:
   
             username: 'gabriellsantoss'
-            password: '${{secrets.SECRET}}'
+            password: ${{secrets.SECRET}}
   
 
       
