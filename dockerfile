@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 as build-env
 
 WORKDIR /App
 
-COPY . 
+COPY . ./  
 
 RUN dotnet restore 
 
@@ -14,4 +14,4 @@ WORKDIR /App
 
 COPY --from=build-env /App/out .
 
-ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
+ENTRYPOINT ["dotnet", "fiap-githubactions-01.dll"]
